@@ -1,1 +1,11 @@
 This repo contains the code for the solution to the Apex SuperBadge challenge.
+
+Code to schedule the apex:
+// Create an instance of your Queueable class
+WarehouseCalloutService myQueueableInstance = new WarehouseCalloutService();
+
+// Enqueue the job for asynchronous processing
+ID jobID = System.enqueueJob(myQueueableInstance);
+
+// Optionally, you can log or process the job ID returned by System.enqueueJob
+System.debug('Enqueued job ID: ' + jobID);
